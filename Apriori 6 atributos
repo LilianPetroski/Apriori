@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     QueryResult-weka.filters.unsupervised.attribute.Remove-R10-18-weka.filters.unsupervised.attribute.Remove-R9-12-weka.filters.unsupervised.attribute.Remove-R1,6-8
+Instances:    898684
+Attributes:   6
+              tipo_de_unidade
+              descrição_do_procedimento
+              descrição_do_cbo
+              descrição_do_cid
+              ds
+              faixa_etaria
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (89868 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 17
+
+Size of set of large itemsets L(2): 21
+
+Size of set of large itemsets L(3): 10
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+  1. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> tipo_de_unidade=BASICO 479631    <conf:(1)> lift:(1.66) lev:(0.21) [190437] conv:(190437.76)
+  2. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA 268429 ==> tipo_de_unidade=BASICO 268429    <conf:(1)> lift:(1.66) lev:(0.12) [106579] conv:(106579.89)
+  3. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA 232950 ==> tipo_de_unidade=BASICO 232950    <conf:(1)> lift:(1.66) lev:(0.1) [92492] conv:(92492.93)
+  4. descrição_do_procedimento=ATENDIMENTO MEDICO EM UNIDADE DE PRONTO ATENDIMENTO 215173 ==> tipo_de_unidade=UPA 215173    <conf:(1)> lift:(2.77) lev:(0.15) [137459] conv:(137459.61)
+  5. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA faixa_etaria=ADULTO 198502 ==> tipo_de_unidade=BASICO 198502    <conf:(1)> lift:(1.66) lev:(0.09) [78815] conv:(78815.33)
+  6. descrição_do_procedimento=ATENDIMENTO MEDICO EM UNIDADE DE PRONTO ATENDIMENTO descrição_do_cbo=MEDICO CLINICO 188250 ==> tipo_de_unidade=UPA 188250    <conf:(1)> lift:(2.77) lev:(0.13) [120260] conv:(120260.31)
+  7. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA faixa_etaria=IDOSO 133635 ==> tipo_de_unidade=BASICO 133635    <conf:(1)> lift:(1.66) lev:(0.06) [53059] conv:(53059.85)
+  8. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA faixa_etaria=ADULTO 112243 ==> tipo_de_unidade=BASICO 112243    <conf:(1)> lift:(1.66) lev:(0.05) [44566] conv:(44566.15)
+  9. descrição_do_procedimento=ATENDIMENTO DE URGENCIA C/ OBSERVACAO ATE 24 HORAS EM ATENCAO ESPECIALIZADA 109332 ==> tipo_de_unidade=UPA 109332    <conf:(1)> lift:(2.77) lev:(0.08) [69844] conv:(69844.89)
+ 10. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA descrição_do_cbo=MEDICO CLINICO 108375 ==> tipo_de_unidade=BASICO 108375    <conf:(1)> lift:(1.66) lev:(0.05) [43030] conv:(43030.36)
+ 11. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA faixa_etaria=ADULTO 103066 ==> tipo_de_unidade=BASICO 103066    <conf:(1)> lift:(1.66) lev:(0.05) [40922] conv:(40922.41)
+ 12. descrição_do_procedimento=ATENDIMENTO DE URGENCIA C/ OBSERVACAO ATE 24 HORAS EM ATENCAO ESPECIALIZADA descrição_do_cbo=MEDICO CLINICO 100396 ==> tipo_de_unidade=UPA 100396    <conf:(1)> lift:(2.77) lev:(0.07) [64136] conv:(64136.28)
+ 13. tipo_de_unidade=UPA faixa_etaria=ADULTO 121672 ==> descrição_do_cbo=MEDICO CLINICO 118448    <conf:(0.97)> lift:(2.13) lev:(0.07) [62924] conv:(20.51)
+ 14. tipo_de_unidade=UPA faixa_etaria=JOVEM ADULTO 93170 ==> descrição_do_cbo=MEDICO CLINICO 89981    <conf:(0.97)> lift:(2.12) lev:(0.05) [47463] conv:(15.88)
+ 15. tipo_de_unidade=BASICO descrição_do_cbo=MEDICO CLINICO 112965 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 108375    <conf:(0.96)> lift:(1.8) lev:(0.05) [48085] conv:(11.47)
+ 16. tipo_de_unidade=BASICO faixa_etaria=IDOSO 139892 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 133635    <conf:(0.96)> lift:(1.79) lev:(0.07) [58974] conv:(10.42)
+ 17. tipo_de_unidade=BASICO faixa_etaria=ADULTO 216047 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 198502    <conf:(0.92)> lift:(1.72) lev:(0.09) [83196] conv:(5.74)
+ 18. descrição_do_procedimento=ATENDIMENTO DE URGENCIA C/ OBSERVACAO ATE 24 HORAS EM ATENCAO ESPECIALIZADA 109332 ==> descrição_do_cbo=MEDICO CLINICO 100396    <conf:(0.92)> lift:(2.01) lev:(0.06) [50503] conv:(6.65)
+ 19. tipo_de_unidade=UPA descrição_do_procedimento=ATENDIMENTO DE URGENCIA C/ OBSERVACAO ATE 24 HORAS EM ATENCAO ESPECIALIZADA 109332 ==> descrição_do_cbo=MEDICO CLINICO 100396    <conf:(0.92)> lift:(2.01) lev:(0.06) [50503] conv:(6.65)
+ 20. descrição_do_procedimento=ATENDIMENTO DE URGENCIA C/ OBSERVACAO ATE 24 HORAS EM ATENCAO ESPECIALIZADA 109332 ==> tipo_de_unidade=UPA descrição_do_cbo=MEDICO CLINICO 100396    <conf:(0.92)> lift:(2.86) lev:(0.07) [65271] conv:(8.3)
+ 21. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA faixa_etaria=ADULTO 112243 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 103066    <conf:(0.92)> lift:(1.72) lev:(0.05) [43161] conv:(5.7)
+ 22. tipo_de_unidade=BASICO descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA faixa_etaria=ADULTO 112243 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 103066    <conf:(0.92)> lift:(1.72) lev:(0.05) [43161] conv:(5.7)
+ 23. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA faixa_etaria=ADULTO 112243 ==> tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 103066    <conf:(0.92)> lift:(1.72) lev:(0.05) [43161] conv:(5.7)
+ 24. descrição_do_cbo=MEDICO GENERALISTA 99513 ==> tipo_de_unidade=BASICO 90308    <conf:(0.91)> lift:(1.51) lev:(0.03) [30306] conv:(4.29)
+ 25. descrição_do_cid=EXAME MEDICO GERAL 103007 ==> tipo_de_unidade=BASICO 92237    <conf:(0.9)> lift:(1.49) lev:(0.03) [30128] conv:(3.8)
+ 26. tipo_de_unidade=UPA 324575 ==> descrição_do_cbo=MEDICO CLINICO 288716    <conf:(0.89)> lift:(1.95) lev:(0.16) [140599] conv:(4.92)
+ 27. tipo_de_unidade=BASICO 541861 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631    <conf:(0.89)> lift:(1.66) lev:(0.21) [190437] conv:(4.06)
+ 28. descrição_do_procedimento=ATENDIMENTO MEDICO EM UNIDADE DE PRONTO ATENDIMENTO 215173 ==> descrição_do_cbo=MEDICO CLINICO 188250    <conf:(0.87)> lift:(1.92) lev:(0.1) [90057] conv:(4.34)
+ 29. tipo_de_unidade=UPA descrição_do_procedimento=ATENDIMENTO MEDICO EM UNIDADE DE PRONTO ATENDIMENTO 215173 ==> descrição_do_cbo=MEDICO CLINICO 188250    <conf:(0.87)> lift:(1.92) lev:(0.1) [90057] conv:(4.34)
+ 30. descrição_do_procedimento=ATENDIMENTO MEDICO EM UNIDADE DE PRONTO ATENDIMENTO 215173 ==> tipo_de_unidade=UPA descrição_do_cbo=MEDICO CLINICO 188250    <conf:(0.87)> lift:(2.72) lev:(0.13) [119122] conv:(5.42)
+ 31. descrição_do_cbo=MEDICO CLINICO faixa_etaria=JOVEM ADULTO 103287 ==> tipo_de_unidade=UPA 89981    <conf:(0.87)> lift:(2.41) lev:(0.06) [52677] conv:(4.96)
+ 32. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA 268429 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 232950    <conf:(0.87)> lift:(1.63) lev:(0.1) [89688] conv:(3.53)
+ 33. tipo_de_unidade=BASICO descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA 268429 ==> descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 232950    <conf:(0.87)> lift:(1.63) lev:(0.1) [89688] conv:(3.53)
+ 34. descrição_do_cbo=MEDICO DA ESTRATEGIA DE SAUDE DA FAMILIA 268429 ==> tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 232950    <conf:(0.87)> lift:(1.63) lev:(0.1) [89688] conv:(3.53)
+
+
