@@ -1,0 +1,206 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 150 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.5 -S -1.0 -c -1
+Relation:     QueryResult-weka.filters.unsupervised.attribute.Remove-R23,25-weka.filters.unsupervised.attribute.Remove-R21-weka.filters.unsupervised.attribute.Remove-R22,24
+Instances:    898684
+Attributes:   24
+              sexo
+              tipo_de_unidade
+              descrição_da_unidade
+              descrição_do_procedimento
+              descrição_do_cbo
+              código_do_cid
+              descrição_do_cid
+              solicitação_de_exames
+              encaminhamento_para_atendimento_especialista
+              desencadeou_internamento
+              tratamento_no_domicílio
+              abastecimento
+              energia_elétrica
+              tipo_de_habitação
+              destino_lixo
+              fezes_urina
+              em_caso_de_doença
+              grupo_comunitário
+              meio_de_comunicacao
+              meio_de_transporte
+              bairro
+              residente
+              ds
+              faixa_etaria
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.85 (763881 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 3
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 8
+
+Size of set of large itemsets L(2): 18
+
+Size of set of large itemsets L(3): 19
+
+Size of set of large itemsets L(4): 9
+
+Size of set of large itemsets L(5): 1
+
+Best rules found:
+
+  1. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772450 ==> destino_lixo=COLETADO 770851    <conf:(1)> lift:(1.01) lev:(0.01) [5831] conv:(4.64)
+  2. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 766715 ==> destino_lixo=COLETADO 765123    <conf:(1)> lift:(1.01) lev:(0.01) [5783] conv:(4.63)
+  3. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> destino_lixo=COLETADO 776326    <conf:(1)> lift:(1.01) lev:(0.01) [5761] conv:(4.34)
+  4. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772282 ==> destino_lixo=COLETADO 770566    <conf:(1)> lift:(1.01) lev:(0.01) [5713] conv:(4.33)
+  5. abastecimento=REDE PÚBLICA energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 767634 ==> destino_lixo=COLETADO 765912    <conf:(1)> lift:(1.01) lev:(0.01) [5662] conv:(4.29)
+  6. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 837778 ==> destino_lixo=COLETADO 835876    <conf:(1)> lift:(1.01) lev:(0.01) [6157] conv:(4.23)
+  7. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 831558 ==> destino_lixo=COLETADO 829665    <conf:(1)> lift:(1.01) lev:(0.01) [6106] conv:(4.22)
+  8. energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 773955 ==> destino_lixo=COLETADO 772068    <conf:(1)> lift:(1.01) lev:(0.01) [5558] conv:(3.94)
+  9. desencadeou_internamento=Nao energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 768458 ==> destino_lixo=COLETADO 766582    <conf:(1)> lift:(1.01) lev:(0.01) [5516] conv:(3.94)
+ 10. fezes_urina=SISTEMA DE ESGOTO 844791 ==> destino_lixo=COLETADO 842666    <conf:(1)> lift:(1.01) lev:(0.01) [6001] conv:(3.82)
+ 11. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 838529 ==> destino_lixo=COLETADO 836415    <conf:(1)> lift:(1.01) lev:(0.01) [5952] conv:(3.81)
+ 12. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> destino_lixo=COLETADO 800819    <conf:(1)> lift:(1.01) lev:(0.01) [5142] conv:(2.99)
+ 13. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 797481 ==> destino_lixo=COLETADO 794910    <conf:(1)> lift:(1.01) lev:(0.01) [5100] conv:(2.98)
+ 14. abastecimento=REDE PÚBLICA energia_elétrica=Sim 813750 ==> destino_lixo=COLETADO 810469    <conf:(1)> lift:(1.01) lev:(0.01) [4546] conv:(2.39)
+ 15. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA energia_elétrica=Sim 808010 ==> destino_lixo=COLETADO 804749    <conf:(1)> lift:(1.01) lev:(0.01) [4511] conv:(2.38)
+ 16. abastecimento=REDE PÚBLICA 885614 ==> destino_lixo=COLETADO 881967    <conf:(1)> lift:(1.01) lev:(0.01) [4872] conv:(2.34)
+ 17. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 879104 ==> destino_lixo=COLETADO 875479    <conf:(1)> lift:(1.01) lev:(0.01) [4831] conv:(2.33)
+ 18. abastecimento=REDE PÚBLICA residente=COM CADASTRO NA UBS 790546 ==> destino_lixo=COLETADO 787060    <conf:(1)> lift:(1.01) lev:(0) [4118] conv:(2.18)
+ 19. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA residente=COM CADASTRO NA UBS 785647 ==> destino_lixo=COLETADO 782181    <conf:(1)> lift:(1.01) lev:(0) [4091] conv:(2.18)
+ 20. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> destino_lixo=COLETADO 807103    <conf:(0.99)> lift:(1) lev:(0) [3473] conv:(1.8)
+ 21. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> destino_lixo=COLETADO 801156    <conf:(0.99)> lift:(1) lev:(0) [3443] conv:(1.8)
+ 22. destino_lixo=COLETADO residente=COM CADASTRO NA UBS 794756 ==> desencadeou_internamento=Nao 789839    <conf:(0.99)> lift:(1) lev:(0) [915] conv:(1.19)
+ 23. residente=COM CADASTRO NA UBS 802983 ==> desencadeou_internamento=Nao 798012    <conf:(0.99)> lift:(1) lev:(0) [921] conv:(1.19)
+ 24. abastecimento=REDE PÚBLICA residente=COM CADASTRO NA UBS 790546 ==> desencadeou_internamento=Nao 785647    <conf:(0.99)> lift:(1) lev:(0) [902] conv:(1.18)
+ 25. abastecimento=REDE PÚBLICA destino_lixo=COLETADO residente=COM CADASTRO NA UBS 787060 ==> desencadeou_internamento=Nao 782181    <conf:(0.99)> lift:(1) lev:(0) [896] conv:(1.18)
+ 26. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 776326 ==> abastecimento=REDE PÚBLICA 770851    <conf:(0.99)> lift:(1.01) lev:(0.01) [5815] conv:(2.06)
+ 27. energia_elétrica=Sim 825264 ==> desencadeou_internamento=Nao 819443    <conf:(0.99)> lift:(1) lev:(0) [235] conv:(1.04)
+ 28. energia_elétrica=Sim destino_lixo=COLETADO 817741 ==> desencadeou_internamento=Nao 811973    <conf:(0.99)> lift:(1) lev:(0) [232] conv:(1.04)
+ 29. abastecimento=REDE PÚBLICA energia_elétrica=Sim 813750 ==> desencadeou_internamento=Nao 808010    <conf:(0.99)> lift:(1) lev:(0) [231] conv:(1.04)
+ 30. abastecimento=REDE PÚBLICA energia_elétrica=Sim destino_lixo=COLETADO 810469 ==> desencadeou_internamento=Nao 804749    <conf:(0.99)> lift:(1) lev:(0) [227] conv:(1.04)
+ 31. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770566 ==> abastecimento=REDE PÚBLICA 765123    <conf:(0.99)> lift:(1.01) lev:(0.01) [5763] conv:(2.06)
+ 32. energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 773955 ==> desencadeou_internamento=Nao 768458    <conf:(0.99)> lift:(1) lev:(0) [182] conv:(1.03)
+ 33. energia_elétrica=Sim destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 772068 ==> desencadeou_internamento=Nao 766582    <conf:(0.99)> lift:(1) lev:(0) [179] conv:(1.03)
+ 34. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> abastecimento=REDE PÚBLICA 772450    <conf:(0.99)> lift:(1.01) lev:(0.01) [5716] conv:(2.02)
+ 35. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772282 ==> abastecimento=REDE PÚBLICA 766715    <conf:(0.99)> lift:(1.01) lev:(0.01) [5664] conv:(2.02)
+ 36. destino_lixo=COLETADO 890039 ==> desencadeou_internamento=Nao 883502    <conf:(0.99)> lift:(1) lev:(-0) [-5] conv:(1)
+ 37. abastecimento=REDE PÚBLICA 885614 ==> desencadeou_internamento=Nao 879104    <conf:(0.99)> lift:(1) lev:(-0) [-10] conv:(1)
+ 38. abastecimento=REDE PÚBLICA destino_lixo=COLETADO 881967 ==> desencadeou_internamento=Nao 875479    <conf:(0.99)> lift:(1) lev:(-0) [-15] conv:(1)
+ 39. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao 805461    <conf:(0.99)> lift:(1) lev:(-0) [-19] conv:(1)
+ 40. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> desencadeou_internamento=Nao 801156    <conf:(0.99)> lift:(1) lev:(-0) [-24] conv:(1)
+ 41. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> desencadeou_internamento=Nao 797481    <conf:(0.99)> lift:(1) lev:(-0) [-28] conv:(1)
+ 42. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 800819 ==> desencadeou_internamento=Nao 794910    <conf:(0.99)> lift:(1) lev:(-0) [-32] conv:(0.99)
+ 43. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> desencadeou_internamento=Nao 772282    <conf:(0.99)> lift:(1) lev:(-0) [-57] conv:(0.99)
+ 44. fezes_urina=SISTEMA DE ESGOTO 844791 ==> desencadeou_internamento=Nao 838529    <conf:(0.99)> lift:(1) lev:(-0) [-62] conv:(0.99)
+ 45. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 842666 ==> desencadeou_internamento=Nao 836415    <conf:(0.99)> lift:(1) lev:(-0) [-67] conv:(0.99)
+ 46. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 776326 ==> desencadeou_internamento=Nao 770566    <conf:(0.99)> lift:(1) lev:(-0) [-62] conv:(0.99)
+ 47. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 837778 ==> desencadeou_internamento=Nao 831558    <conf:(0.99)> lift:(1) lev:(-0) [-71] conv:(0.99)
+ 48. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772450 ==> desencadeou_internamento=Nao 766715    <conf:(0.99)> lift:(1) lev:(-0) [-66] conv:(0.99)
+ 49. abastecimento=REDE PÚBLICA destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 835876 ==> desencadeou_internamento=Nao 829665    <conf:(0.99)> lift:(1) lev:(-0) [-76] conv:(0.99)
+ 50. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770851 ==> desencadeou_internamento=Nao 765123    <conf:(0.99)> lift:(1) lev:(-0) [-71] conv:(0.99)
+ 51. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> abastecimento=REDE PÚBLICA 800819    <conf:(0.99)> lift:(1.01) lev:(0.01) [5454] conv:(1.87)
+ 52. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 801156 ==> abastecimento=REDE PÚBLICA 794910    <conf:(0.99)> lift:(1.01) lev:(0.01) [5405] conv:(1.87)
+ 53. energia_elétrica=Sim destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 772068 ==> abastecimento=REDE PÚBLICA 765912    <conf:(0.99)> lift:(1.01) lev:(0.01) [5072] conv:(1.82)
+ 54. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 842666 ==> abastecimento=REDE PÚBLICA 835876    <conf:(0.99)> lift:(1.01) lev:(0.01) [5465] conv:(1.8)
+ 55. desencadeou_internamento=Nao destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 836415 ==> abastecimento=REDE PÚBLICA 829665    <conf:(0.99)> lift:(1.01) lev:(0.01) [5414] conv:(1.8)
+ 56. energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 773955 ==> abastecimento=REDE PÚBLICA 767634    <conf:(0.99)> lift:(1.01) lev:(0.01) [4935] conv:(1.78)
+ 57. fezes_urina=SISTEMA DE ESGOTO 844791 ==> abastecimento=REDE PÚBLICA 837778    <conf:(0.99)> lift:(1.01) lev:(0.01) [5273] conv:(1.75)
+ 58. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 838529 ==> abastecimento=REDE PÚBLICA 831558    <conf:(0.99)> lift:(1.01) lev:(0.01) [5224] conv:(1.75)
+ 59. encaminhamento_para_atendimento_especialista=Nao 771066 ==> desencadeou_internamento=Nao 764473    <conf:(0.99)> lift:(1) lev:(-0) [-934] conv:(0.86)
+ 60. energia_elétrica=Sim destino_lixo=COLETADO 817741 ==> abastecimento=REDE PÚBLICA 810469    <conf:(0.99)> lift:(1.01) lev:(0.01) [4620] conv:(1.64)
+ 61. desencadeou_internamento=Nao energia_elétrica=Sim destino_lixo=COLETADO 811973 ==> abastecimento=REDE PÚBLICA 804749    <conf:(0.99)> lift:(1.01) lev:(0.01) [4584] conv:(1.63)
+ 62. destino_lixo=COLETADO 890039 ==> abastecimento=REDE PÚBLICA 881967    <conf:(0.99)> lift:(1.01) lev:(0.01) [4872] conv:(1.6)
+ 63. desencadeou_internamento=Nao destino_lixo=COLETADO 883502 ==> abastecimento=REDE PÚBLICA 875479    <conf:(0.99)> lift:(1.01) lev:(0.01) [4826] conv:(1.6)
+ 64. energia_elétrica=Sim 825264 ==> destino_lixo=COLETADO 817741    <conf:(0.99)> lift:(1) lev:(0) [415] conv:(1.06)
+ 65. desencadeou_internamento=Nao energia_elétrica=Sim 819443 ==> destino_lixo=COLETADO 811973    <conf:(0.99)> lift:(1) lev:(0) [412] conv:(1.06)
+ 66. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 770851    <conf:(0.99)> lift:(1.01) lev:(0.01) [7274] conv:(2.01)
+ 67. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772282 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 765123    <conf:(0.99)> lift:(1.01) lev:(0.01) [7206] conv:(2.01)
+ 68. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 772450 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 765123    <conf:(0.99)> lift:(1.01) lev:(0.01) [5722] conv:(1.78)
+ 69. energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 773955 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 766582    <conf:(0.99)> lift:(1.01) lev:(0.01) [5701] conv:(1.77)
+ 70. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 770566    <conf:(0.99)> lift:(1.01) lev:(0.01) [5661] conv:(1.76)
+ 71. desencadeou_internamento=Nao 892089 ==> destino_lixo=COLETADO 883502    <conf:(0.99)> lift:(1) lev:(-0) [-5] conv:(1)
+ 72. destino_lixo=COLETADO residente=COM CADASTRO NA UBS 794756 ==> abastecimento=REDE PÚBLICA 787060    <conf:(0.99)> lift:(1) lev:(0) [3862] conv:(1.5)
+ 73. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 837778 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 829665    <conf:(0.99)> lift:(1.01) lev:(0.01) [6040] conv:(1.74)
+ 74. desencadeou_internamento=Nao destino_lixo=COLETADO residente=COM CADASTRO NA UBS 789839 ==> abastecimento=REDE PÚBLICA 782181    <conf:(0.99)> lift:(1) lev:(0) [3829] conv:(1.5)
+ 75. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> abastecimento=REDE PÚBLICA 803405    <conf:(0.99)> lift:(1) lev:(0) [3771] conv:(1.47)
+ 76. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> abastecimento=REDE PÚBLICA 797481    <conf:(0.99)> lift:(1) lev:(0) [3734] conv:(1.47)
+ 77. fezes_urina=SISTEMA DE ESGOTO 844791 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 836415    <conf:(0.99)> lift:(1.01) lev:(0.01) [5895] conv:(1.7)
+ 78. desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 798012 ==> destino_lixo=COLETADO 789839    <conf:(0.99)> lift:(1) lev:(-0) [-496] conv:(0.94)
+ 79. residente=COM CADASTRO NA UBS 802983 ==> destino_lixo=COLETADO 794756    <conf:(0.99)> lift:(1) lev:(-0) [-502] conv:(0.94)
+ 80. energia_elétrica=Sim fezes_urina=SISTEMA DE ESGOTO 773955 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 765912    <conf:(0.99)> lift:(1.01) lev:(0.01) [6353] conv:(1.79)
+ 81. fezes_urina=SISTEMA DE ESGOTO 844791 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 835876    <conf:(0.99)> lift:(1.01) lev:(0.01) [6799] conv:(1.76)
+ 82. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 838529 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 829665    <conf:(0.99)> lift:(1.01) lev:(0.01) [6734] conv:(1.76)
+ 83. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 794910    <conf:(0.99)> lift:(1.01) lev:(0.01) [5077] conv:(1.6)
+ 84. abastecimento=REDE PÚBLICA residente=COM CADASTRO NA UBS 790546 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 782181    <conf:(0.99)> lift:(1.01) lev:(0.01) [4990] conv:(1.6)
+ 85. abastecimento=REDE PÚBLICA energia_elétrica=Sim 813750 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 804749    <conf:(0.99)> lift:(1.01) lev:(0.01) [4746] conv:(1.53)
+ 86. abastecimento=REDE PÚBLICA 885614 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 875479    <conf:(0.99)> lift:(1.01) lev:(0.01) [4826] conv:(1.48)
+ 87. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 801156    <conf:(0.99)> lift:(1) lev:(0) [3429] conv:(1.33)
+ 88. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 800819    <conf:(0.99)> lift:(1.01) lev:(0) [4478] conv:(1.42)
+ 89. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 794910    <conf:(0.99)> lift:(1.01) lev:(0) [4431] conv:(1.42)
+ 90. energia_elétrica=Sim 825264 ==> abastecimento=REDE PÚBLICA 813750    <conf:(0.99)> lift:(1) lev:(0) [488] conv:(1.04)
+ 91. desencadeou_internamento=Nao energia_elétrica=Sim 819443 ==> abastecimento=REDE PÚBLICA 808010    <conf:(0.99)> lift:(1) lev:(0) [484] conv:(1.04)
+ 92. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 776326 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 765123    <conf:(0.99)> lift:(1.01) lev:(0.01) [5711] conv:(1.51)
+ 93. desencadeou_internamento=Nao 892089 ==> abastecimento=REDE PÚBLICA 879104    <conf:(0.99)> lift:(1) lev:(-0) [-10] conv:(1)
+ 94. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 766715    <conf:(0.99)> lift:(1.01) lev:(0.01) [5617] conv:(1.5)
+ 95. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 794910    <conf:(0.98)> lift:(1.01) lev:(0.01) [5391] conv:(1.44)
+ 96. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 842666 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 829665    <conf:(0.98)> lift:(1.01) lev:(0.01) [5358] conv:(1.41)
+ 97. residente=COM CADASTRO NA UBS 802983 ==> abastecimento=REDE PÚBLICA 790546    <conf:(0.98)> lift:(1) lev:(-0) [-758] conv:(0.94)
+ 98. desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 798012 ==> abastecimento=REDE PÚBLICA 785647    <conf:(0.98)> lift:(1) lev:(-0) [-759] conv:(0.94)
+ 99. fezes_urina=SISTEMA DE ESGOTO 844791 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 831558    <conf:(0.98)> lift:(1.01) lev:(0.01) [5172] conv:(1.39)
+100. destino_lixo=COLETADO residente=COM CADASTRO NA UBS 794756 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 782181    <conf:(0.98)> lift:(1.01) lev:(0.01) [4740] conv:(1.38)
+101. energia_elétrica=Sim destino_lixo=COLETADO 817741 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 804749    <conf:(0.98)> lift:(1.01) lev:(0.01) [4824] conv:(1.37)
+102. energia_elétrica=Sim 825264 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 811973    <conf:(0.98)> lift:(1) lev:(0) [650] conv:(1.05)
+103. destino_lixo=COLETADO 890039 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 875479    <conf:(0.98)> lift:(1.01) lev:(0.01) [4831] conv:(1.33)
+104. residente=COM CADASTRO NA UBS 802983 ==> desencadeou_internamento=Nao destino_lixo=COLETADO 789839    <conf:(0.98)> lift:(1) lev:(0) [421] conv:(1.03)
+105. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO fezes_urina=SISTEMA DE ESGOTO 778049 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 765123    <conf:(0.98)> lift:(1.01) lev:(0.01) [7164] conv:(1.55)
+106. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 797481    <conf:(0.98)> lift:(1) lev:(0) [3725] conv:(1.27)
+107. fezes_urina=SISTEMA DE ESGOTO 844791 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 829665    <conf:(0.98)> lift:(1.01) lev:(0.01) [6687] conv:(1.44)
+108. energia_elétrica=Sim 825264 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 810469    <conf:(0.98)> lift:(1) lev:(0) [556] conv:(1.04)
+109. desencadeou_internamento=Nao energia_elétrica=Sim 819443 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 804749    <conf:(0.98)> lift:(1) lev:(0) [548] conv:(1.04)
+110. desencadeou_internamento=Nao 892089 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 875479    <conf:(0.98)> lift:(1) lev:(-0) [-15] conv:(1)
+111. residente=COM CADASTRO NA UBS 802983 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 787060    <conf:(0.98)> lift:(1) lev:(-0) [-986] conv:(0.94)
+112. desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 798012 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO 782181    <conf:(0.98)> lift:(1) lev:(-0) [-986] conv:(0.94)
+113. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 794910    <conf:(0.98)> lift:(1.01) lev:(0) [4427] conv:(1.27)
+114. energia_elétrica=Sim 825264 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 808010    <conf:(0.98)> lift:(1) lev:(0) [726] conv:(1.04)
+115. residente=COM CADASTRO NA UBS 802983 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 785647    <conf:(0.98)> lift:(1) lev:(0) [158] conv:(1.01)
+116. energia_elétrica=Sim 825264 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 804749    <conf:(0.98)> lift:(1) lev:(0) [794] conv:(1.04)
+117. residente=COM CADASTRO NA UBS 802983 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 782181    <conf:(0.97)> lift:(1) lev:(-0) [-68] conv:(1)
+118. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 800819 ==> fezes_urina=SISTEMA DE ESGOTO 770851    <conf:(0.96)> lift:(1.02) lev:(0.02) [18056] conv:(1.6)
+119. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 794910 ==> fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.96)> lift:(1.02) lev:(0.02) [17882] conv:(1.6)
+120. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> fezes_urina=SISTEMA DE ESGOTO 776326    <conf:(0.96)> lift:(1.02) lev:(0.02) [17623] conv:(1.57)
+121. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 801156 ==> fezes_urina=SISTEMA DE ESGOTO 770566    <conf:(0.96)> lift:(1.02) lev:(0.02) [17454] conv:(1.57)
+122. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> fezes_urina=SISTEMA DE ESGOTO 772450    <conf:(0.96)> lift:(1.02) lev:(0.02) [17224] conv:(1.56)
+123. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 797481 ==> fezes_urina=SISTEMA DE ESGOTO 766715    <conf:(0.96)> lift:(1.02) lev:(0.02) [17057] conv:(1.55)
+124. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770851    <conf:(0.96)> lift:(1.02) lev:(0.02) [17524] conv:(1.54)
+125. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 797481 ==> destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.96)> lift:(1.02) lev:(0.02) [17351] conv:(1.54)
+126. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> fezes_urina=SISTEMA DE ESGOTO 778049    <conf:(0.96)> lift:(1.02) lev:(0.02) [15274] conv:(1.46)
+127. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> fezes_urina=SISTEMA DE ESGOTO 772282    <conf:(0.96)> lift:(1.02) lev:(0.02) [15123] conv:(1.46)
+128. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 776326    <conf:(0.96)> lift:(1.02) lev:(0.02) [15470] conv:(1.44)
+129. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770566    <conf:(0.96)> lift:(1.02) lev:(0.02) [15312] conv:(1.44)
+130. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 800819 ==> desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.96)> lift:(1.02) lev:(0.02) [17908] conv:(1.5)
+131. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 770851    <conf:(0.96)> lift:(1.02) lev:(0.02) [18447] conv:(1.51)
+132. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 801156 ==> abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.96)> lift:(1.02) lev:(0.02) [18263] conv:(1.51)
+133. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 770566    <conf:(0.95)> lift:(1.02) lev:(0.02) [17487] conv:(1.48)
+134. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 766715    <conf:(0.95)> lift:(1.02) lev:(0.02) [17087] conv:(1.47)
+135. abastecimento=REDE PÚBLICA tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 803405 ==> desencadeou_internamento=Nao destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.95)> lift:(1.02) lev:(0.02) [17385] conv:(1.45)
+136. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 772450    <conf:(0.95)> lift:(1.02) lev:(0.02) [16007] conv:(1.41)
+137. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 766715    <conf:(0.95)> lift:(1.02) lev:(0.02) [15842] conv:(1.41)
+138. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 772282    <conf:(0.95)> lift:(1.02) lev:(0.02) [15161] conv:(1.39)
+139. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770851    <conf:(0.95)> lift:(1.02) lev:(0.02) [16126] conv:(1.4)
+140. desencadeou_internamento=Nao tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 805461 ==> abastecimento=REDE PÚBLICA destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.95)> lift:(1.02) lev:(0.02) [15954] conv:(1.4)
+141. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 770566    <conf:(0.95)> lift:(1.02) lev:(0.02) [15354] conv:(1.38)
+142. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO destino_lixo=COLETADO 807103 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 765123    <conf:(0.95)> lift:(1.02) lev:(0.02) [18305] conv:(1.44)
+143. abastecimento=REDE PÚBLICA destino_lixo=COLETADO 881967 ==> fezes_urina=SISTEMA DE ESGOTO 835876    <conf:(0.95)> lift:(1.01) lev:(0.01) [6799] conv:(1.15)
+144. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO 875479 ==> fezes_urina=SISTEMA DE ESGOTO 829665    <conf:(0.95)> lift:(1.01) lev:(0.01) [6687] conv:(1.15)
+145. destino_lixo=COLETADO 890039 ==> fezes_urina=SISTEMA DE ESGOTO 842666    <conf:(0.95)> lift:(1.01) lev:(0.01) [6001] conv:(1.13)
+146. desencadeou_internamento=Nao destino_lixo=COLETADO 883502 ==> fezes_urina=SISTEMA DE ESGOTO 836415    <conf:(0.95)> lift:(1.01) lev:(0.01) [5895] conv:(1.13)
+147. abastecimento=REDE PÚBLICA 885614 ==> fezes_urina=SISTEMA DE ESGOTO 837778    <conf:(0.95)> lift:(1.01) lev:(0.01) [5273] conv:(1.11)
+148. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 879104 ==> fezes_urina=SISTEMA DE ESGOTO 831558    <conf:(0.95)> lift:(1.01) lev:(0.01) [5172] conv:(1.11)
+149. abastecimento=REDE PÚBLICA energia_elétrica=Sim destino_lixo=COLETADO 810469 ==> fezes_urina=SISTEMA DE ESGOTO 765912    <conf:(0.95)> lift:(1.01) lev:(0) [4045] conv:(1.09)
+150. tipo_de_habitação=TIJOLO/ALVENARIA COM REVESTIMENTO 811435 ==> desencadeou_internamento=Nao abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 766715    <conf:(0.94)> lift:(1.02) lev:(0.02) [15889] conv:(1.36)
+
+

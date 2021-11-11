@@ -1,0 +1,213 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 150 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.5 -S -1.0 -c -1
+Relation:     QueryResult
+Instances:    898684
+Attributes:   29
+              sexo
+              tipo_de_unidade
+              descrição_da_unidade
+              descrição_do_procedimento
+              descrição_do_cbo
+              código_do_cid
+              descrição_do_cid
+              solicitação_de_exames
+              encaminhamento_para_atendimento_especialista
+              desencadeou_internamento
+              tratamento_no_domicílio
+              abastecimento
+              energia_elétrica
+              tipo_de_habitação
+              destino_lixo
+              fezes_urina
+              em_caso_de_doença
+              grupo_comunitário
+              meio_de_comunicacao
+              meio_de_transporte
+              município
+              bairro
+              nacionalidade
+              cod_usuario
+              origem_usuario
+              residente
+              cod_profissional
+              ds
+              faixa_etaria
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.9 (808816 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 2
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 9
+
+Size of set of large itemsets L(2): 26
+
+Size of set of large itemsets L(3): 32
+
+Size of set of large itemsets L(4): 20
+
+Size of set of large itemsets L(5): 7
+
+Size of set of large itemsets L(6): 1
+
+Best rules found:
+
+  1. origem_usuario=RESIDENTE NO MUNICIPIO 867343 ==> município=CURITIBA 867343    <conf:(1)> lift:(1.04) lev:(0.03) [30248] conv:(30248)
+  2. município=CURITIBA 867343 ==> origem_usuario=RESIDENTE NO MUNICIPIO 867343    <conf:(1)> lift:(1.04) lev:(0.03) [30248] conv:(30248)
+  3. desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 861436 ==> município=CURITIBA 861436    <conf:(1)> lift:(1.04) lev:(0.03) [30042] conv:(30042)
+  4. desencadeou_internamento=Nao município=CURITIBA 861436 ==> origem_usuario=RESIDENTE NO MUNICIPIO 861436    <conf:(1)> lift:(1.04) lev:(0.03) [30042] conv:(30042)
+  5. destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 858709 ==> município=CURITIBA 858709    <conf:(1)> lift:(1.04) lev:(0.03) [29946] conv:(29946.9)
+  6. destino_lixo=COLETADO município=CURITIBA 858709 ==> origem_usuario=RESIDENTE NO MUNICIPIO 858709    <conf:(1)> lift:(1.04) lev:(0.03) [29946] conv:(29946.9)
+  7. abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> município=CURITIBA 854288    <conf:(1)> lift:(1.04) lev:(0.03) [29792] conv:(29792.72)
+  8. abastecimento=REDE PÚBLICA município=CURITIBA 854288 ==> origem_usuario=RESIDENTE NO MUNICIPIO 854288    <conf:(1)> lift:(1.04) lev:(0.03) [29792] conv:(29792.72)
+  9. nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 852875 ==> município=CURITIBA 852875    <conf:(1)> lift:(1.04) lev:(0.03) [29743] conv:(29743.44)
+ 10. município=CURITIBA nacionalidade=Brasileira 852875 ==> origem_usuario=RESIDENTE NO MUNICIPIO 852875    <conf:(1)> lift:(1.04) lev:(0.03) [29743] conv:(29743.44)
+ 11. desencadeou_internamento=Nao destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 852860 ==> município=CURITIBA 852860    <conf:(1)> lift:(1.04) lev:(0.03) [29742] conv:(29742.92)
+ 12. desencadeou_internamento=Nao destino_lixo=COLETADO município=CURITIBA 852860 ==> origem_usuario=RESIDENTE NO MUNICIPIO 852860    <conf:(1)> lift:(1.04) lev:(0.03) [29742] conv:(29742.92)
+ 13. abastecimento=REDE PÚBLICA destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 850649 ==> município=CURITIBA 850649    <conf:(1)> lift:(1.04) lev:(0.03) [29665] conv:(29665.81)
+ 14. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA 850649 ==> origem_usuario=RESIDENTE NO MUNICIPIO 850649    <conf:(1)> lift:(1.04) lev:(0.03) [29665] conv:(29665.81)
+ 15. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 848466 ==> município=CURITIBA 848466    <conf:(1)> lift:(1.04) lev:(0.03) [29589] conv:(29589.68)
+ 16. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA 848466 ==> origem_usuario=RESIDENTE NO MUNICIPIO 848466    <conf:(1)> lift:(1.04) lev:(0.03) [29589] conv:(29589.68)
+ 17. desencadeou_internamento=Nao nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 847082 ==> município=CURITIBA 847082    <conf:(1)> lift:(1.04) lev:(0.03) [29541] conv:(29541.41)
+ 18. desencadeou_internamento=Nao município=CURITIBA nacionalidade=Brasileira 847082 ==> origem_usuario=RESIDENTE NO MUNICIPIO 847082    <conf:(1)> lift:(1.04) lev:(0.03) [29541] conv:(29541.41)
+ 19. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 844849 ==> município=CURITIBA 844849    <conf:(1)> lift:(1.04) lev:(0.03) [29463] conv:(29463.54)
+ 20. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA 844849 ==> origem_usuario=RESIDENTE NO MUNICIPIO 844849    <conf:(1)> lift:(1.04) lev:(0.03) [29463] conv:(29463.54)
+ 21. destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 844350 ==> município=CURITIBA 844350    <conf:(1)> lift:(1.04) lev:(0.03) [29446] conv:(29446.14)
+ 22. destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 844350 ==> origem_usuario=RESIDENTE NO MUNICIPIO 844350    <conf:(1)> lift:(1.04) lev:(0.03) [29446] conv:(29446.14)
+ 23. abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> município=CURITIBA 839987    <conf:(1)> lift:(1.04) lev:(0.03) [29293] conv:(29293.98)
+ 24. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 839987 ==> origem_usuario=RESIDENTE NO MUNICIPIO 839987    <conf:(1)> lift:(1.04) lev:(0.03) [29293] conv:(29293.98)
+ 25. desencadeou_internamento=Nao destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 838614 ==> município=CURITIBA 838614    <conf:(1)> lift:(1.04) lev:(0.03) [29246] conv:(29246.1)
+ 26. desencadeou_internamento=Nao destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 838614 ==> origem_usuario=RESIDENTE NO MUNICIPIO 838614    <conf:(1)> lift:(1.04) lev:(0.03) [29246] conv:(29246.1)
+ 27. abastecimento=REDE PÚBLICA destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 836368 ==> município=CURITIBA 836368    <conf:(1)> lift:(1.04) lev:(0.03) [29167] conv:(29167.77)
+ 28. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 836368 ==> origem_usuario=RESIDENTE NO MUNICIPIO 836368    <conf:(1)> lift:(1.04) lev:(0.03) [29167] conv:(29167.77)
+ 29. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 834278 ==> município=CURITIBA 834278    <conf:(1)> lift:(1.04) lev:(0.03) [29094] conv:(29094.88)
+ 30. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 834278 ==> origem_usuario=RESIDENTE NO MUNICIPIO 834278    <conf:(1)> lift:(1.04) lev:(0.03) [29094] conv:(29094.88)
+ 31. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 830681 ==> município=CURITIBA 830681    <conf:(1)> lift:(1.04) lev:(0.03) [28969] conv:(28969.44)
+ 32. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 830681 ==> origem_usuario=RESIDENTE NO MUNICIPIO 830681    <conf:(1)> lift:(1.04) lev:(0.03) [28969] conv:(28969.44)
+ 33. fezes_urina=SISTEMA DE ESGOTO origem_usuario=RESIDENTE NO MUNICIPIO 813566 ==> município=CURITIBA 813566    <conf:(1)> lift:(1.04) lev:(0.03) [28372] conv:(28372.57)
+ 34. fezes_urina=SISTEMA DE ESGOTO município=CURITIBA 813566 ==> origem_usuario=RESIDENTE NO MUNICIPIO 813566    <conf:(1)> lift:(1.04) lev:(0.03) [28372] conv:(28372.57)
+ 35. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO origem_usuario=RESIDENTE NO MUNICIPIO 811443 ==> município=CURITIBA 811443    <conf:(1)> lift:(1.04) lev:(0.03) [28298] conv:(28298.53)
+ 36. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO município=CURITIBA 811443 ==> origem_usuario=RESIDENTE NO MUNICIPIO 811443    <conf:(1)> lift:(1.04) lev:(0.03) [28298] conv:(28298.53)
+ 37. energia_elétrica=Sim origem_usuario=RESIDENTE NO MUNICIPIO 809309 ==> município=CURITIBA 809309    <conf:(1)> lift:(1.04) lev:(0.03) [28224] conv:(28224.11)
+ 38. energia_elétrica=Sim município=CURITIBA 809309 ==> origem_usuario=RESIDENTE NO MUNICIPIO 809309    <conf:(1)> lift:(1.04) lev:(0.03) [28224] conv:(28224.11)
+ 39. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 837778 ==> destino_lixo=COLETADO 835876    <conf:(1)> lift:(1.01) lev:(0.01) [6157] conv:(4.23)
+ 40. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 831558 ==> destino_lixo=COLETADO 829665    <conf:(1)> lift:(1.01) lev:(0.01) [6106] conv:(4.22)
+ 41. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 817844 ==> destino_lixo=COLETADO 815949    <conf:(1)> lift:(1.01) lev:(0.01) [5972] conv:(4.15)
+ 42. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 811861 ==> destino_lixo=COLETADO 809975    <conf:(1)> lift:(1.01) lev:(0.01) [5923] conv:(4.14)
+ 43. fezes_urina=SISTEMA DE ESGOTO 844791 ==> destino_lixo=COLETADO 842666    <conf:(1)> lift:(1.01) lev:(0.01) [6001] conv:(3.82)
+ 44. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 838529 ==> destino_lixo=COLETADO 836415    <conf:(1)> lift:(1.01) lev:(0.01) [5952] conv:(3.81)
+ 45. fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 824792 ==> destino_lixo=COLETADO 822674    <conf:(1)> lift:(1.01) lev:(0.01) [5816] conv:(3.74)
+ 46. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 818767 ==> destino_lixo=COLETADO 816660    <conf:(1)> lift:(1.01) lev:(0.01) [5769] conv:(3.74)
+ 47. fezes_urina=SISTEMA DE ESGOTO município=CURITIBA 813566 ==> destino_lixo=COLETADO 811443    <conf:(1)> lift:(1.01) lev:(0.01) [5703] conv:(3.68)
+ 48. fezes_urina=SISTEMA DE ESGOTO origem_usuario=RESIDENTE NO MUNICIPIO 813566 ==> destino_lixo=COLETADO 811443    <conf:(1)> lift:(1.01) lev:(0.01) [5703] conv:(3.68)
+ 49. fezes_urina=SISTEMA DE ESGOTO município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 813566 ==> destino_lixo=COLETADO 811443    <conf:(1)> lift:(1.01) lev:(0.01) [5703] conv:(3.68)
+ 50. fezes_urina=SISTEMA DE ESGOTO origem_usuario=RESIDENTE NO MUNICIPIO 813566 ==> destino_lixo=COLETADO município=CURITIBA 811443    <conf:(1)> lift:(1.04) lev:(0.04) [34065] conv:(17.04)
+ 51. fezes_urina=SISTEMA DE ESGOTO município=CURITIBA 813566 ==> destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 811443    <conf:(1)> lift:(1.04) lev:(0.04) [34065] conv:(17.04)
+ 52. abastecimento=REDE PÚBLICA energia_elétrica=Sim 813750 ==> destino_lixo=COLETADO 810469    <conf:(1)> lift:(1.01) lev:(0.01) [4546] conv:(2.39)
+ 53. abastecimento=REDE PÚBLICA 885614 ==> destino_lixo=COLETADO 881967    <conf:(1)> lift:(1.01) lev:(0.01) [4872] conv:(2.34)
+ 54. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA 879104 ==> destino_lixo=COLETADO 875479    <conf:(1)> lift:(1.01) lev:(0.01) [4831] conv:(2.33)
+ 55. abastecimento=REDE PÚBLICA nacionalidade=Brasileira 865423 ==> destino_lixo=COLETADO 861796    <conf:(1)> lift:(1.01) lev:(0.01) [4698] conv:(2.29)
+ 56. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA nacionalidade=Brasileira 859151 ==> destino_lixo=COLETADO 855546    <conf:(1)> lift:(1.01) lev:(0.01) [4659] conv:(2.29)
+ 57. abastecimento=REDE PÚBLICA município=CURITIBA 854288 ==> destino_lixo=COLETADO 850649    <conf:(1)> lift:(1.01) lev:(0.01) [4578] conv:(2.26)
+ 58. abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> destino_lixo=COLETADO 850649    <conf:(1)> lift:(1.01) lev:(0.01) [4578] conv:(2.26)
+ 59. abastecimento=REDE PÚBLICA município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> destino_lixo=COLETADO 850649    <conf:(1)> lift:(1.01) lev:(0.01) [4578] conv:(2.26)
+ 60. abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> destino_lixo=COLETADO município=CURITIBA 850649    <conf:(1)> lift:(1.04) lev:(0.04) [34361] conv:(10.44)
+ 61. abastecimento=REDE PÚBLICA município=CURITIBA 854288 ==> destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 850649    <conf:(1)> lift:(1.04) lev:(0.04) [34361] conv:(10.44)
+ 62. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA 848466 ==> destino_lixo=COLETADO 844849    <conf:(1)> lift:(1.01) lev:(0.01) [4544] conv:(2.26)
+ 63. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 848466 ==> destino_lixo=COLETADO 844849    <conf:(1)> lift:(1.01) lev:(0.01) [4544] conv:(2.26)
+ 64. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 848466 ==> destino_lixo=COLETADO 844849    <conf:(1)> lift:(1.01) lev:(0.01) [4544] conv:(2.26)
+ 65. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 848466 ==> destino_lixo=COLETADO município=CURITIBA 844849    <conf:(1)> lift:(1.04) lev:(0.04) [34124] conv:(10.43)
+ 66. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA 848466 ==> destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 844849    <conf:(1)> lift:(1.04) lev:(0.04) [34124] conv:(10.43)
+ 67. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 839987 ==> destino_lixo=COLETADO 836368    <conf:(1)> lift:(1.01) lev:(0) [4461] conv:(2.23)
+ 68. abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> destino_lixo=COLETADO 836368    <conf:(1)> lift:(1.01) lev:(0) [4461] conv:(2.23)
+ 69. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> destino_lixo=COLETADO 836368    <conf:(1)> lift:(1.01) lev:(0) [4461] conv:(2.23)
+ 70. abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> destino_lixo=COLETADO município=CURITIBA 836368    <conf:(1)> lift:(1.04) lev:(0.04) [33745] conv:(10.32)
+ 71. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 839987 ==> destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 836368    <conf:(1)> lift:(1.04) lev:(0.04) [33745] conv:(10.32)
+ 72. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 834278 ==> destino_lixo=COLETADO 830681    <conf:(1)> lift:(1.01) lev:(0) [4428] conv:(2.23)
+ 73. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 834278 ==> destino_lixo=COLETADO 830681    <conf:(1)> lift:(1.01) lev:(0) [4428] conv:(2.23)
+ 74. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 834278 ==> destino_lixo=COLETADO 830681    <conf:(1)> lift:(1.01) lev:(0) [4428] conv:(2.23)
+ 75. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 834278 ==> destino_lixo=COLETADO município=CURITIBA 830681    <conf:(1)> lift:(1.04) lev:(0.04) [33513] conv:(10.31)
+ 76. desencadeou_internamento=Nao abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 834278 ==> destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 830681    <conf:(1)> lift:(1.04) lev:(0.04) [33513] conv:(10.31)
+ 77. município=CURITIBA nacionalidade=Brasileira 852875 ==> desencadeou_internamento=Nao 847082    <conf:(0.99)> lift:(1) lev:(0) [465] conv:(1.08)
+ 78. nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 852875 ==> desencadeou_internamento=Nao 847082    <conf:(0.99)> lift:(1) lev:(0) [465] conv:(1.08)
+ 79. município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 852875 ==> desencadeou_internamento=Nao 847082    <conf:(0.99)> lift:(1) lev:(0) [465] conv:(1.08)
+ 80. nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 852875 ==> desencadeou_internamento=Nao município=CURITIBA 847082    <conf:(0.99)> lift:(1.04) lev:(0.03) [29556] conv:(6.1)
+ 81. município=CURITIBA nacionalidade=Brasileira 852875 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 847082    <conf:(0.99)> lift:(1.04) lev:(0.03) [29556] conv:(6.1)
+ 82. destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 844350 ==> desencadeou_internamento=Nao 838614    <conf:(0.99)> lift:(1) lev:(0) [460] conv:(1.08)
+ 83. destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 844350 ==> desencadeou_internamento=Nao 838614    <conf:(0.99)> lift:(1) lev:(0) [460] conv:(1.08)
+ 84. destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 844350 ==> desencadeou_internamento=Nao 838614    <conf:(0.99)> lift:(1) lev:(0) [460] conv:(1.08)
+ 85. destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 844350 ==> desencadeou_internamento=Nao município=CURITIBA 838614    <conf:(0.99)> lift:(1.04) lev:(0.03) [29260] conv:(6.1)
+ 86. destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 844350 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 838614    <conf:(0.99)> lift:(1.04) lev:(0.03) [29260] conv:(6.1)
+ 87. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 839987 ==> desencadeou_internamento=Nao 834278    <conf:(0.99)> lift:(1) lev:(0) [455] conv:(1.08)
+ 88. abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> desencadeou_internamento=Nao 834278    <conf:(0.99)> lift:(1) lev:(0) [455] conv:(1.08)
+ 89. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> desencadeou_internamento=Nao 834278    <conf:(0.99)> lift:(1) lev:(0) [455] conv:(1.08)
+ 90. abastecimento=REDE PÚBLICA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 839987 ==> desencadeou_internamento=Nao município=CURITIBA 834278    <conf:(0.99)> lift:(1.04) lev:(0.03) [29106] conv:(6.1)
+ 91. abastecimento=REDE PÚBLICA município=CURITIBA nacionalidade=Brasileira 839987 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 834278    <conf:(0.99)> lift:(1.04) lev:(0.03) [29106] conv:(6.1)
+ 92. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 836368 ==> desencadeou_internamento=Nao 830681    <conf:(0.99)> lift:(1) lev:(0) [450] conv:(1.08)
+ 93. abastecimento=REDE PÚBLICA destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 836368 ==> desencadeou_internamento=Nao 830681    <conf:(0.99)> lift:(1) lev:(0) [450] conv:(1.08)
+ 94. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 836368 ==> desencadeou_internamento=Nao 830681    <conf:(0.99)> lift:(1) lev:(0) [450] conv:(1.08)
+ 95. abastecimento=REDE PÚBLICA destino_lixo=COLETADO nacionalidade=Brasileira origem_usuario=RESIDENTE NO MUNICIPIO 836368 ==> desencadeou_internamento=Nao município=CURITIBA 830681    <conf:(0.99)> lift:(1.04) lev:(0.03) [28978] conv:(6.09)
+ 96. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA nacionalidade=Brasileira 836368 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 830681    <conf:(0.99)> lift:(1.04) lev:(0.03) [28978] conv:(6.09)
+ 97. município=CURITIBA 867343 ==> desencadeou_internamento=Nao 861436    <conf:(0.99)> lift:(1) lev:(0) [458] conv:(1.08)
+ 98. origem_usuario=RESIDENTE NO MUNICIPIO 867343 ==> desencadeou_internamento=Nao 861436    <conf:(0.99)> lift:(1) lev:(0) [458] conv:(1.08)
+ 99. município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 867343 ==> desencadeou_internamento=Nao 861436    <conf:(0.99)> lift:(1) lev:(0) [458] conv:(1.08)
+100. origem_usuario=RESIDENTE NO MUNICIPIO 867343 ==> desencadeou_internamento=Nao município=CURITIBA 861436    <conf:(0.99)> lift:(1.04) lev:(0.03) [30042] conv:(6.08)
+101. município=CURITIBA 867343 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 861436    <conf:(0.99)> lift:(1.04) lev:(0.03) [30042] conv:(6.08)
+102. destino_lixo=COLETADO município=CURITIBA 858709 ==> desencadeou_internamento=Nao 852860    <conf:(0.99)> lift:(1) lev:(0) [452] conv:(1.08)
+103. destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 858709 ==> desencadeou_internamento=Nao 852860    <conf:(0.99)> lift:(1) lev:(0) [452] conv:(1.08)
+104. destino_lixo=COLETADO município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 858709 ==> desencadeou_internamento=Nao 852860    <conf:(0.99)> lift:(1) lev:(0) [452] conv:(1.08)
+105. destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 858709 ==> desencadeou_internamento=Nao município=CURITIBA 852860    <conf:(0.99)> lift:(1.04) lev:(0.03) [29742] conv:(6.08)
+106. destino_lixo=COLETADO município=CURITIBA 858709 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 852860    <conf:(0.99)> lift:(1.04) lev:(0.03) [29742] conv:(6.08)
+107. abastecimento=REDE PÚBLICA município=CURITIBA 854288 ==> desencadeou_internamento=Nao 848466    <conf:(0.99)> lift:(1) lev:(0) [447] conv:(1.08)
+108. abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> desencadeou_internamento=Nao 848466    <conf:(0.99)> lift:(1) lev:(0) [447] conv:(1.08)
+109. abastecimento=REDE PÚBLICA município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> desencadeou_internamento=Nao 848466    <conf:(0.99)> lift:(1) lev:(0) [447] conv:(1.08)
+110. abastecimento=REDE PÚBLICA origem_usuario=RESIDENTE NO MUNICIPIO 854288 ==> desencadeou_internamento=Nao município=CURITIBA 848466    <conf:(0.99)> lift:(1.04) lev:(0.03) [29585] conv:(6.08)
+111. abastecimento=REDE PÚBLICA município=CURITIBA 854288 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 848466    <conf:(0.99)> lift:(1.04) lev:(0.03) [29585] conv:(6.08)
+112. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA 850649 ==> desencadeou_internamento=Nao 844849    <conf:(0.99)> lift:(1) lev:(0) [442] conv:(1.08)
+113. abastecimento=REDE PÚBLICA destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 850649 ==> desencadeou_internamento=Nao 844849    <conf:(0.99)> lift:(1) lev:(0) [442] conv:(1.08)
+114. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA origem_usuario=RESIDENTE NO MUNICIPIO 850649 ==> desencadeou_internamento=Nao 844849    <conf:(0.99)> lift:(1) lev:(0) [442] conv:(1.08)
+115. abastecimento=REDE PÚBLICA destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 850649 ==> desencadeou_internamento=Nao município=CURITIBA 844849    <conf:(0.99)> lift:(1.04) lev:(0.03) [29457] conv:(6.08)
+116. abastecimento=REDE PÚBLICA destino_lixo=COLETADO município=CURITIBA 850649 ==> desencadeou_internamento=Nao origem_usuario=RESIDENTE NO MUNICIPIO 844849    <conf:(0.99)> lift:(1.04) lev:(0.03) [29457] conv:(6.08)
+117. energia_elétrica=Sim 825264 ==> desencadeou_internamento=Nao 819443    <conf:(0.99)> lift:(1) lev:(0) [235] conv:(1.04)
+118. energia_elétrica=Sim destino_lixo=COLETADO 817741 ==> desencadeou_internamento=Nao 811973    <conf:(0.99)> lift:(1) lev:(0) [232] conv:(1.04)
+119. nacionalidade=Brasileira 878326 ==> desencadeou_internamento=Nao 871970    <conf:(0.99)> lift:(1) lev:(0) [89] conv:(1.01)
+120. destino_lixo=COLETADO nacionalidade=Brasileira 869790 ==> desencadeou_internamento=Nao 863491    <conf:(0.99)> lift:(1) lev:(0) [83] conv:(1.01)
+121. abastecimento=REDE PÚBLICA nacionalidade=Brasileira 865423 ==> desencadeou_internamento=Nao 859151    <conf:(0.99)> lift:(1) lev:(0) [78] conv:(1.01)
+122. abastecimento=REDE PÚBLICA destino_lixo=COLETADO nacionalidade=Brasileira 861796 ==> desencadeou_internamento=Nao 855546    <conf:(0.99)> lift:(1) lev:(0) [74] conv:(1.01)
+123. fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 824792 ==> desencadeou_internamento=Nao 818767    <conf:(0.99)> lift:(1) lev:(0) [27] conv:(1)
+124. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 822674 ==> desencadeou_internamento=Nao 816660    <conf:(0.99)> lift:(1) lev:(0) [23] conv:(1)
+125. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 817844 ==> desencadeou_internamento=Nao 811861    <conf:(0.99)> lift:(1) lev:(0) [18] conv:(1)
+126. abastecimento=REDE PÚBLICA destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 815949 ==> desencadeou_internamento=Nao 809975    <conf:(0.99)> lift:(1) lev:(0) [13] conv:(1)
+127. destino_lixo=COLETADO 890039 ==> desencadeou_internamento=Nao 883502    <conf:(0.99)> lift:(1) lev:(-0) [-5] conv:(1)
+128. abastecimento=REDE PÚBLICA 885614 ==> desencadeou_internamento=Nao 879104    <conf:(0.99)> lift:(1) lev:(-0) [-10] conv:(1)
+129. abastecimento=REDE PÚBLICA destino_lixo=COLETADO 881967 ==> desencadeou_internamento=Nao 875479    <conf:(0.99)> lift:(1) lev:(-0) [-15] conv:(1)
+130. fezes_urina=SISTEMA DE ESGOTO 844791 ==> desencadeou_internamento=Nao 838529    <conf:(0.99)> lift:(1) lev:(-0) [-62] conv:(0.99)
+131. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 842666 ==> desencadeou_internamento=Nao 836415    <conf:(0.99)> lift:(1) lev:(-0) [-67] conv:(0.99)
+132. abastecimento=REDE PÚBLICA fezes_urina=SISTEMA DE ESGOTO 837778 ==> desencadeou_internamento=Nao 831558    <conf:(0.99)> lift:(1) lev:(-0) [-71] conv:(0.99)
+133. abastecimento=REDE PÚBLICA destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 835876 ==> desencadeou_internamento=Nao 829665    <conf:(0.99)> lift:(1) lev:(-0) [-76] conv:(0.99)
+134. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 842666 ==> abastecimento=REDE PÚBLICA 835876    <conf:(0.99)> lift:(1.01) lev:(0.01) [5465] conv:(1.8)
+135. desencadeou_internamento=Nao destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO 836415 ==> abastecimento=REDE PÚBLICA 829665    <conf:(0.99)> lift:(1.01) lev:(0.01) [5414] conv:(1.8)
+136. destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 822674 ==> abastecimento=REDE PÚBLICA 815949    <conf:(0.99)> lift:(1.01) lev:(0.01) [5239] conv:(1.78)
+137. desencadeou_internamento=Nao destino_lixo=COLETADO fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 816660 ==> abastecimento=REDE PÚBLICA 809975    <conf:(0.99)> lift:(1.01) lev:(0.01) [5192] conv:(1.78)
+138. fezes_urina=SISTEMA DE ESGOTO 844791 ==> abastecimento=REDE PÚBLICA 837778    <conf:(0.99)> lift:(1.01) lev:(0.01) [5273] conv:(1.75)
+139. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO 838529 ==> abastecimento=REDE PÚBLICA 831558    <conf:(0.99)> lift:(1.01) lev:(0.01) [5224] conv:(1.75)
+140. fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 824792 ==> abastecimento=REDE PÚBLICA 817844    <conf:(0.99)> lift:(1.01) lev:(0.01) [5047] conv:(1.73)
+141. desencadeou_internamento=Nao fezes_urina=SISTEMA DE ESGOTO nacionalidade=Brasileira 818767 ==> abastecimento=REDE PÚBLICA 811861    <conf:(0.99)> lift:(1.01) lev:(0.01) [5001] conv:(1.72)
+142. energia_elétrica=Sim destino_lixo=COLETADO 817741 ==> abastecimento=REDE PÚBLICA 810469    <conf:(0.99)> lift:(1.01) lev:(0.01) [4620] conv:(1.64)
+143. destino_lixo=COLETADO 890039 ==> abastecimento=REDE PÚBLICA 881967    <conf:(0.99)> lift:(1.01) lev:(0.01) [4872] conv:(1.6)
+144. desencadeou_internamento=Nao destino_lixo=COLETADO 883502 ==> abastecimento=REDE PÚBLICA 875479    <conf:(0.99)> lift:(1.01) lev:(0.01) [4826] conv:(1.6)
+145. energia_elétrica=Sim 825264 ==> destino_lixo=COLETADO 817741    <conf:(0.99)> lift:(1) lev:(0) [415] conv:(1.06)
+146. desencadeou_internamento=Nao energia_elétrica=Sim 819443 ==> destino_lixo=COLETADO 811973    <conf:(0.99)> lift:(1) lev:(0) [412] conv:(1.06)
+147. destino_lixo=COLETADO nacionalidade=Brasileira 869790 ==> abastecimento=REDE PÚBLICA 861796    <conf:(0.99)> lift:(1.01) lev:(0.01) [4655] conv:(1.58)
+148. desencadeou_internamento=Nao destino_lixo=COLETADO nacionalidade=Brasileira 863491 ==> abastecimento=REDE PÚBLICA 855546    <conf:(0.99)> lift:(1.01) lev:(0.01) [4613] conv:(1.58)
+149. destino_lixo=COLETADO município=CURITIBA 858709 ==> abastecimento=REDE PÚBLICA 850649    <conf:(0.99)> lift:(1.01) lev:(0) [4428] conv:(1.55)
+150. destino_lixo=COLETADO origem_usuario=RESIDENTE NO MUNICIPIO 858709 ==> abastecimento=REDE PÚBLICA 850649    <conf:(0.99)> lift:(1.01) lev:(0) [4428] conv:(1.55)
+
+

@@ -1,0 +1,87 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 150 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.5 -S -1.0 -c -1
+Relation:     QueryResult-weka.filters.unsupervised.attribute.Remove-R23,25-weka.filters.unsupervised.attribute.Remove-R21-weka.filters.unsupervised.attribute.Remove-R22,24-weka.filters.unsupervised.attribute.Remove-R11-20
+Instances:    898684
+Attributes:   14
+              sexo
+              tipo_de_unidade
+              descrição_da_unidade
+              descrição_do_procedimento
+              descrição_do_cbo
+              código_do_cid
+              descrição_do_cid
+              solicitação_de_exames
+              encaminhamento_para_atendimento_especialista
+              desencadeou_internamento
+              bairro
+              residente
+              ds
+              faixa_etaria
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.5 (449342 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 10
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 7
+
+Size of set of large itemsets L(2): 14
+
+Size of set of large itemsets L(3): 10
+
+Size of set of large itemsets L(4): 2
+
+Best rules found:
+
+  1. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> tipo_de_unidade=BASICO 479631    <conf:(1)> lift:(1.66) lev:(0.21) [190437] conv:(190437.76)
+  2. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA desencadeou_internamento=Nao 479607 ==> tipo_de_unidade=BASICO 479607    <conf:(1)> lift:(1.66) lev:(0.21) [190428] conv:(190428.24)
+  3. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA residente=COM CADASTRO NA UBS 465391 ==> tipo_de_unidade=BASICO 465391    <conf:(1)> lift:(1.66) lev:(0.21) [184783] conv:(184783.76)
+  4. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 465369 ==> tipo_de_unidade=BASICO 465369    <conf:(1)> lift:(1.66) lev:(0.21) [184775] conv:(184775.03)
+  5. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA residente=COM CADASTRO NA UBS 465391 ==> desencadeou_internamento=Nao 465369    <conf:(1)> lift:(1.01) lev:(0) [3393] conv:(148.49)
+  6. tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA residente=COM CADASTRO NA UBS 465391 ==> desencadeou_internamento=Nao 465369    <conf:(1)> lift:(1.01) lev:(0) [3393] conv:(148.49)
+  7. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA residente=COM CADASTRO NA UBS 465391 ==> tipo_de_unidade=BASICO desencadeou_internamento=Nao 465369    <conf:(1)> lift:(1.66) lev:(0.21) [184778] conv:(8034.82)
+  8. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> desencadeou_internamento=Nao 479607    <conf:(1)> lift:(1.01) lev:(0) [3495] conv:(140.79)
+  9. tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> desencadeou_internamento=Nao 479607    <conf:(1)> lift:(1.01) lev:(0) [3495] conv:(140.79)
+ 10. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> tipo_de_unidade=BASICO desencadeou_internamento=Nao 479607    <conf:(1)> lift:(1.66) lev:(0.21) [190431] conv:(7618.22)
+ 11. tipo_de_unidade=BASICO residente=COM CADASTRO NA UBS 523688 ==> desencadeou_internamento=Nao 523657    <conf:(1)> lift:(1.01) lev:(0) [3812] conv:(120.1)
+ 12. tipo_de_unidade=BASICO 541861 ==> desencadeou_internamento=Nao 541828    <conf:(1)> lift:(1.01) lev:(0) [3943] conv:(116.95)
+ 13. solicitação_de_exames=Nao residente=COM CADASTRO NA UBS 577478 ==> desencadeou_internamento=Nao 577301    <conf:(1)> lift:(1.01) lev:(0) [4060] conv:(23.81)
+ 14. solicitação_de_exames=Nao encaminhamento_para_atendimento_especialista=Nao residente=COM CADASTRO NA UBS 524272 ==> desencadeou_internamento=Nao 524097    <conf:(1)> lift:(1.01) lev:(0) [3672] conv:(21.86)
+ 15. solicitação_de_exames=Nao 654138 ==> desencadeou_internamento=Nao 653882    <conf:(1)> lift:(1.01) lev:(0.01) [4544] conv:(18.68)
+ 16. solicitação_de_exames=Nao encaminhamento_para_atendimento_especialista=Nao 599544 ==> desencadeou_internamento=Nao 599290    <conf:(1)> lift:(1.01) lev:(0) [4145] conv:(17.25)
+ 17. sexo=F residente=COM CADASTRO NA UBS 513056 ==> desencadeou_internamento=Nao 510540    <conf:(1)> lift:(1) lev:(0) [1249] conv:(1.5)
+ 18. sexo=F 564847 ==> desencadeou_internamento=Nao 561561    <conf:(0.99)> lift:(1) lev:(0) [859] conv:(1.26)
+ 19. residente=COM CADASTRO NA UBS 802983 ==> desencadeou_internamento=Nao 798012    <conf:(0.99)> lift:(1) lev:(0) [921] conv:(1.19)
+ 20. sexo=F encaminhamento_para_atendimento_especialista=Nao 478913 ==> desencadeou_internamento=Nao 475627    <conf:(0.99)> lift:(1) lev:(0) [228] conv:(1.07)
+ 21. encaminhamento_para_atendimento_especialista=Nao residente=COM CADASTRO NA UBS 678634 ==> desencadeou_internamento=Nao 673665    <conf:(0.99)> lift:(1) lev:(0) [11] conv:(1)
+ 22. encaminhamento_para_atendimento_especialista=Nao 771066 ==> desencadeou_internamento=Nao 764473    <conf:(0.99)> lift:(1) lev:(-0) [-934] conv:(0.86)
+ 23. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA desencadeou_internamento=Nao 479607 ==> residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.09) lev:(0.04) [36835] conv:(3.59)
+ 24. tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA desencadeou_internamento=Nao 479607 ==> residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.09) lev:(0.04) [36835] conv:(3.59)
+ 25. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA desencadeou_internamento=Nao 479607 ==> tipo_de_unidade=BASICO residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.67) lev:(0.21) [185888] conv:(14.05)
+ 26. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> residente=COM CADASTRO NA UBS 465391    <conf:(0.97)> lift:(1.09) lev:(0.04) [36835] conv:(3.59)
+ 27. tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> residente=COM CADASTRO NA UBS 465391    <conf:(0.97)> lift:(1.09) lev:(0.04) [36835] conv:(3.59)
+ 28. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> tipo_de_unidade=BASICO residente=COM CADASTRO NA UBS 465391    <conf:(0.97)> lift:(1.67) lev:(0.21) [185896] conv:(14.05)
+ 29. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.09) lev:(0.04) [39467] conv:(3.77)
+ 30. tipo_de_unidade=BASICO descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.09) lev:(0.04) [39467] conv:(3.77)
+ 31. descrição_do_procedimento=CONSULTA MEDICA EM ATENCAO PRIMARIA 479631 ==> tipo_de_unidade=BASICO desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 465369    <conf:(0.97)> lift:(1.67) lev:(0.21) [185891] conv:(14.03)
+ 32. tipo_de_unidade=BASICO desencadeou_internamento=Nao 541828 ==> residente=COM CADASTRO NA UBS 523657    <conf:(0.97)> lift:(1.08) lev:(0.04) [39528] conv:(3.18)
+ 33. tipo_de_unidade=BASICO 541861 ==> residente=COM CADASTRO NA UBS 523688    <conf:(0.97)> lift:(1.08) lev:(0.04) [39529] conv:(3.18)
+ 34. tipo_de_unidade=BASICO 541861 ==> desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 523657    <conf:(0.97)> lift:(1.09) lev:(0.05) [42496] conv:(3.33)
+ 35. solicitação_de_exames=Nao 654138 ==> encaminhamento_para_atendimento_especialista=Nao 599544    <conf:(0.92)> lift:(1.07) lev:(0.04) [38297] conv:(1.7)
+ 36. solicitação_de_exames=Nao desencadeou_internamento=Nao 653882 ==> encaminhamento_para_atendimento_especialista=Nao 599290    <conf:(0.92)> lift:(1.07) lev:(0.04) [38262] conv:(1.7)
+ 37. solicitação_de_exames=Nao 654138 ==> encaminhamento_para_atendimento_especialista=Nao desencadeou_internamento=Nao 599290    <conf:(0.92)> lift:(1.08) lev:(0.05) [42842] conv:(1.78)
+ 38. sexo=F desencadeou_internamento=Nao 561561 ==> residente=COM CADASTRO NA UBS 510540    <conf:(0.91)> lift:(1.02) lev:(0.01) [8779] conv:(1.17)
+ 39. sexo=F 564847 ==> residente=COM CADASTRO NA UBS 513056    <conf:(0.91)> lift:(1.02) lev:(0.01) [8359] conv:(1.16)
+ 40. solicitação_de_exames=Nao residente=COM CADASTRO NA UBS 577478 ==> encaminhamento_para_atendimento_especialista=Nao 524272    <conf:(0.91)> lift:(1.06) lev:(0.03) [28799] conv:(1.54)
+ 41. solicitação_de_exames=Nao desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 577301 ==> encaminhamento_para_atendimento_especialista=Nao 524097    <conf:(0.91)> lift:(1.06) lev:(0.03) [28775] conv:(1.54)
+ 42. solicitação_de_exames=Nao residente=COM CADASTRO NA UBS 577478 ==> encaminhamento_para_atendimento_especialista=Nao desencadeou_internamento=Nao 524097    <conf:(0.91)> lift:(1.07) lev:(0.04) [32860] conv:(1.62)
+ 43. sexo=F 564847 ==> desencadeou_internamento=Nao residente=COM CADASTRO NA UBS 510540    <conf:(0.9)> lift:(1.02) lev:(0.01) [8968] conv:(1.17)
+
+
